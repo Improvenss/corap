@@ -15,6 +15,7 @@ typedef struct s_base
 
 void	check_repeating(t_base *base);
 void	check_number(char *arg);
+void	check_sorted(t_base *base);
 // -------------- Cift Tirnak -----------------
 void	set_quotation_args(t_base *base, int ac, char **av);
 

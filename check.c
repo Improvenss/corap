@@ -41,3 +41,13 @@ void	check_number(char *arg)
 			print_error("Error: Some arguments aren't integers!", 1);
 	}
 }
+
+void check_sorted(t_base *base)
+{
+	int i = -1;
+	while (++i < base->size_a - 1)
+		if (base->a[i] > base->a[i + 1])
+			return ;
+	ft_printf("ZATEN SIRALI ASKO\n");
+	exit(0);
+}
