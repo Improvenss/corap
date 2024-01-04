@@ -13,13 +13,12 @@ typedef struct s_base
 }	t_base;
 
 void	check_repeating(t_base *base);
+void	check_number(char *arg);
 // -------------- Cift Tirnak -----------------
-void	check_quotation_args(t_base *base, int ac, char **av);
-// void	set_quotation_numbers(t_base *base, int ac, char **av);
+void	set_quotation_args(t_base *base, int ac, char **av);
 
 // -------------- Argumanlar ------------------
-void	check_args(t_base *base, int ac, char **av);
-// void	set_numbers(t_base *base, int ac, char **av);
+void	set_args(t_base *base, int ac, char **av);
 
 // ------------- Print ------------------------
 void	print_stack(t_base *base);

@@ -1,43 +1,48 @@
-// #include "push_swap.h"
+#include "push_swap.h"
 
-// // ./push_swap '8 2 5 3 6' -> 1 arguman ile set edilme.
-// void	set_quotation_numbers(t_base *base, int ac, char **av)
-// {
-// 	(void)ac;
-// 	char	**args;
-// 	int		i;
+void	set_quotation_args(t_base *base, int ac, char **av)
+{
+	(void)ac;
+	char	**args;
+	int		i;
 
-// 	base = malloc(sizeof(t_base));
-// 	if (!base)
-// 		print_error("Error: malloc(): Can't allocate memory!", 1);
+	args = ft_split(av[1], ' ');
+	if (!args)
+		print_error("Error: ft_split(): Can't allocate memory!", 1);
+	i = -1;
+	while (args[++i])
+	{
+		check_number(args[i]);
+		base->a[i] = *(int *)malloc(sizeof(int));
+		if (base->a[i])
+			print_error("Error: *(int*)malloc(): Can't allocate memory!", 1);
+		base->a[i] = ft_atoi(args[i]);
+	}
+	base->size_a = i;
+}
 
-// 	ft_printf("%d\n", __LINE__);
-// 	args = ft_split(av[1], ' ');
-// 	if (!args)
-// 		print_error("Error: ft_split(): Can't allocate memory!", 1);
+void	set_args(t_base *base, int ac, char **av)
+{
+	(void)base;
+	int	i;
 
-// 	ft_printf("%d\n", __LINE__);
-// 	i = -1;
-// 	while (args[++i])
-// 	{
-// 	ft_printf("%d\n", __LINE__);
-// 		base->a[i] = *(int *)malloc(sizeof(int));
-// 	ft_printf("%d\n", __LINE__);
-// 		// if (!base->a[i])
-// 		// 	print_error("Error: *(int*)malloc(): Can't allocate memory!", 1);
-// 		// check_repeating(base, base->a[i]);
-// 		base->a[i] = ft_atoi(args[i]);
-// 	ft_printf("%d\n", __LINE__);
-// 		ft_printf("%s ", args[i]);
-// 	}
-// 	ft_printf("\n");
-// 	base->size_a = i;
-// 	ft_printf("A stack'imizin sayisi: %d\n", base->size_a);
-// 	print_stack(base->a);
-// }
+	i = 0;
+	while (++i < ac)
+	{
+		// ft_printf("argumanlarimiz [%d] -> [%s]\n", i, av[i]);
+		check_number(av[i]);
+		base->a[i - 1] = *(int *)malloc(sizeof(int));
+		if (base->a[i - 1])
+			print_error("Error: *(int*)malloc(): Can't allocate memory!", 1);
+		base->a[i - 1] = ft_atoi(av[i]);
+	}
+	base->size_a = ac - 1;
+}
 
-// // // ./push_swap 8 2 5 3 6 -> Birden fazla arguman ile.
-// void	set_numbers(t_base *base, int ac, char **av)
-// {
+// make && ARG='4 1 2 6 7 5 2522525 -25233'; ./push_swap $ARG
 
-// }
+//	  av[0]             av[1]
+// ./push_swap '2 51 56 3 1 9 -15 2 -2523'
+
+//	  av[0]   av[1] av[2] av[3] av[4] av[5]
+// ./push_swap 2 51 56 3 1 9 -15 2 -2523
