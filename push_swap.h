@@ -3,6 +3,7 @@
 
 # include "libft/libft.h"
 # include <stdlib.h>
+# include <stdbool.h>
 
 typedef struct s_base
 {
@@ -23,5 +24,24 @@ void	set_args(t_base *base, int ac, char **av);
 // ------------- Print ------------------------
 void	print_stack(t_base *base);
 void	print_error(char *str, int err_num);
+
+void	sort_stack(t_base *base);
+
+// --------------- Operations -----------------
+// __ SWAP __
+void	sa(t_base *base, bool print);
+void	sb(t_base *base, bool print);
+void	ss(t_base *base, bool print);
+// __ PUSH __
+void	pa(t_base *base, bool print);
+void	pb(t_base *base, bool print);
+// __ ROTATE __
+void	ra(t_base *base, bool print);
+void	rb(t_base *base, bool print);
+void	rr(t_base *base, bool print);
+// __ REVERSE ROTATE __
+void	rra(t_base *base, bool print);
+void	rrb(t_base *base, bool print);
+void	rrr(t_base *base, bool print);
 
 #endif

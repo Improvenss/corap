@@ -32,7 +32,8 @@ int	main(int ac, char **av)
 		set_quotation_args(&base, ac, av);
 	else
 		set_args(&base, ac, av);
-	// print_stack(&base);
 	// ft_printf("A stack'imizin sayisi: %d\n", base.size_a);
 	check_repeating(&base);
+	sort_stack(&base);
+	// print_stack(&base);
 }

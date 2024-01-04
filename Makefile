@@ -8,6 +8,11 @@ SRC				=	main.c \
 					error.c \
 					print.c \
 					set.c \
+					sort.c \
+					op_push.c \
+					op_r_rotate.c \
+					op_rotate.c \
+					op_swap.c \
 
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a

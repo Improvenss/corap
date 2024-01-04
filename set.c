@@ -14,7 +14,7 @@ void	set_quotation_args(t_base *base, int ac, char **av)
 	{
 		check_number(args[i]);
 		base->a[i] = *(int *)malloc(sizeof(int));
-		if (base->a[i])
+		if (!base->a[i])
 			print_error("Error: *(int*)malloc(): Can't allocate memory!", 1);
 		base->a[i] = ft_atoi(args[i]);
 	}
