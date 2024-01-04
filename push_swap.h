@@ -26,7 +26,13 @@ void	set_args(t_base *base, int ac, char **av);
 void	print_stack(t_base *base);
 void	print_error(char *str, int err_num);
 
+// -------- Sorting ---------------------------
 void	sort_stack(t_base *base);
+void	sort_many(t_base *base);
+
+// -------- Find ------------------------------
+int	find_middle(t_base *base);
+
 
 // --------------- Operations -----------------
 // __ SWAP __

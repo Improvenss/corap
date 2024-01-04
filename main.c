@@ -35,5 +35,5 @@ int	main(int ac, char **av)
 	// ft_printf("A stack'imizin sayisi: %d\n", base.size_a);
 	check_repeating(&base);
 	sort_stack(&base);
-	// print_stack(&base);
+	// check_sorted(&base);
 }
