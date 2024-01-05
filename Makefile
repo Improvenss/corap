@@ -7,9 +7,11 @@ SRC				=	main.c \
 					check.c \
 					error.c \
 					find.c \
+					lenght.c \
 					print.c \
 					set.c \
 					sort_many.c \
+					sort_seperate.c \
 					sort.c \
 					op_push.c \
 					op_r_rotate.c \

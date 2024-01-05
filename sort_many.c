@@ -2,9 +2,6 @@
 
 void	sort_many(t_base *base)
 {
-	// int	piv_a;
-	(void)base;
-	// int	piv_b;
-
-	// piv_a = find_middle(base);
+	find_sml(base); // small middle large sayiyi bul.
+	sort_seperate(base);
 }

@@ -1,6 +1,14 @@
 #ifndef PUSH_SWAP
 # define PUSH_SWAP
 
+# define B_CYAN		"\033[1;36m"
+# define B_BLUE		"\033[1;34m"
+# define B_YELLOW	"\033[1;33m"
+# define B_GREEN	"\033[1;32m"
+# define B_RED		"\033[1;31m"
+# define B_RESET	"\033[1m"
+
+
 # include "libft/libft.h"
 # include <stdlib.h>
 # include <stdbool.h>
@@ -11,6 +19,9 @@ typedef struct s_base
 	int	*b;
 	int	size_a; // kac tane sayimiz var 
 	int	size_b; // kac tane sayimiz var 
+	int	small; // sayilarimiz arasindaki en kucuk sayi
+	int	middle; // ortanca sayi
+	int	large; // en buyuk sayi
 }	t_base;
 
 void	check_repeating(t_base *base);
@@ -29,10 +40,12 @@ void	print_error(char *str, int err_num);
 // -------- Sorting ---------------------------
 void	sort_stack(t_base *base);
 void	sort_many(t_base *base);
+void	sort_seperate(t_base *base);
+// -------- Get -------------------------------
+int	get_stack_size(int *stack);
 
 // -------- Find ------------------------------
-int	find_middle(t_base *base);
-
+int	find_sml(t_base *base);
 
 // --------------- Operations -----------------
 // __ SWAP __

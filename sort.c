@@ -22,7 +22,7 @@ static void	sort_three(t_base *s)
 
 void	sort_stack(t_base *base)
 {
-	check_sorted(base);
+	check_sorted(base); // sirali degilse devam edecek
 	base->size_b = base->size_a;
 	base->b = (int *)malloc(sizeof(int) * base->size_a);
 	if (!base->b)
@@ -33,8 +33,5 @@ void	sort_stack(t_base *base)
 	else if (base->size_a == 3)
 		sort_three(base);
 	else
-	{
 		sort_many(base);
-		ft_printf("Burayi sonra yapacagiz.\n");
-	}
 }
