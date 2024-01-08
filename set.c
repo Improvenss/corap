@@ -8,7 +8,7 @@ void	set_quotation_args(t_base *base, int ac, char **av)
 
 	args = ft_split(av[1], ' ');
 	if (!args)
-		print_error("Error: ft_split(): Can't allocate memory!", 1);
+		print_error("Error\n", 1);
 	if (args[0] && args[1] == NULL)
 		exit(0);
 	i = -1;
@@ -17,7 +17,7 @@ void	set_quotation_args(t_base *base, int ac, char **av)
 		check_number(args[i]);
 		base->a[i] = *(int *)malloc(sizeof(int));
 		if (!base->a[i])
-			print_error("Error: Qutoe *(int*)malloc(): Can't allocate memory!", 1);
+			print_error("Error\n", 1);
 		base->a[i] = ft_atoi(args[i]);
 	}
 	base->size_a = i;
@@ -35,7 +35,9 @@ void	set_args(t_base *base, int ac, char **av)
 		check_number(av[i]);
 		base->a[i - 1] = *(int *)malloc(sizeof(int));
 		if (base->a[i - 1])
-			print_error("Error: ARGS base->a *(int*)malloc(): Can't allocate memory!", 1);
+			print_error("Error\n", 1);
+		if (if_args_mintm(av[i]))
+			print_error("Error\n", 1);
 		base->a[i - 1] = ft_atoi(av[i]);
 	}
 	base->size_a = ac - 1;

@@ -18,6 +18,7 @@ SRC				=	main.c \
 					sort_seperate.c \
 					sort_small.c \
 					sort.c \
+					utils.c \
 
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a

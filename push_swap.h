@@ -28,6 +28,8 @@ void	check_repeating(t_base *base);
 void	check_number(char *arg);
 int	is_sorted(int *stack_a, int size, int flag);
 void	check_sorted(t_base *base);
+bool	if_args_mintm(const char *argv);
+int	ft_isspace(char chr);
 // -------------- Cift Tirnak -----------------
 void	set_quotation_args(t_base *base, int ac, char **av);
 

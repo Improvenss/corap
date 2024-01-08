@@ -28,7 +28,7 @@ void	sort_stack(t_base *base)
 	base->size_b = 0;
 	base->b = (int *)malloc(sizeof(int) * base->size_a);
 	if (!base->b)
-		print_error("Error: base->b (int*)malloc(): Can't allocate memory!", 1);
+		print_error("Error\n", 1);
 	// print_stack(base);
 	if (base->size_a == 2)
 		sa(base, true);
