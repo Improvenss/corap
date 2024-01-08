@@ -41,7 +41,6 @@ int	ft_quicksort_b(t_base *stack, int len, int count)
 	items = len;
 	while (len != items / 2)
 	{
-		// ft_printf("buraya girecek mi\n");
 		if (stack->b[0] >= pivot_b && (len--))
 			pa(stack, 1);
 		else if (++count)

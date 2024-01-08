@@ -5,7 +5,6 @@ void	print_stack(t_base *base)
 	int	i;
 
 	i = -1;
-	ft_printf("base->size_a %d, base->size_b %d\n", base->size_a, base->size_b);
 	while (++i < (base->size_a + base->size_b))
 	{
 		if (!base->a[i])

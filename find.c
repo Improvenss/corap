@@ -57,30 +57,30 @@ int	find_small(int *stack, int size)
 	return (small);
 }
 
-#include <stdlib.h>
+// #include <stdlib.h>
 
-int	find_middle(int	*stack, int size)
-{
-	int	middle;
-	int	i;
-	int	*arr;
-	int	found;
+// int	find_middle(int	*stack, int size)
+// {
+// 	int	middle;
+// 	int	i;
+// 	int	*arr;
+// 	int	found;
 
-	middle = (find_small(stack, size) + find_large(stack, size)) / 2;
-	i = -1;
-	arr = stack;
-	found = 0;
-	while (++i < size)
-	{
-		// if ((arr[i] > middle) && (arr[i] < middle))
-		if (arr[i] == middle)
-			return (arr[i]);
-		else if(abs(arr[i] - middle) < abs(found - middle))
-			found = arr[i];
-	}
-	ft_printf("found: %d\n", found);
-	return (found);
-}
+// 	middle = (find_small(stack, size) + find_large(stack, size)) / 2;
+// 	i = -1;
+// 	arr = stack;
+// 	found = 0;
+// 	while (++i < size)
+// 	{
+// 		// if ((arr[i] > middle) && (arr[i] < middle))
+// 		if (arr[i] == middle)
+// 			return (arr[i]);
+// 		else if(abs(arr[i] - middle) < abs(found - middle))
+// 			found = arr[i];
+// 	}
+// 	ft_printf("found: %d\n", found);
+// 	return (found);
+// }
 
 int	find_large(int *stack, int size)
 {
