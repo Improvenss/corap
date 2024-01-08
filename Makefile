@@ -8,15 +8,16 @@ SRC				=	main.c \
 					error.c \
 					find.c \
 					lenght.c \
-					print.c \
-					set.c \
-					sort_many.c \
-					sort_seperate.c \
-					sort.c \
 					op_push.c \
 					op_r_rotate.c \
 					op_rotate.c \
 					op_swap.c \
+					print.c \
+					set.c \
+					sort_many.c \
+					sort_seperate.c \
+					sort_small.c \
+					sort.c \
 
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a

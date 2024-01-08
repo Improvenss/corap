@@ -42,12 +42,30 @@ void	check_number(char *arg)
 	}
 }
 
+int	is_sorted(int *stack_a, int size, int flag)
+{
+	int	i;
+
+	i = 0;
+	while ((flag == 0) && (++i < size))
+	{
+		if (stack_a[i - 1] > stack_a[i])
+			return (0);
+	}
+	while ((flag == 1) && (++i < size))
+	{
+		if (stack_a[i - 1] < stack_a[i])
+			return (0);
+	}
+	return (1);
+}
+
 void check_sorted(t_base *base)
 {
 	int i = -1;
 	while (++i < base->size_a - 1)
 		if (base->a[i] > base->a[i + 1])
 			return ;
-	ft_printf("ZATEN SIRALI ASKO\n");
+	// ft_printf("ZATEN SIRALI ASKO\n");
 	exit(0);
 }

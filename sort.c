@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-static void	sort_three(t_base *s)
+int	sort_three(t_base *s)
 {
 	if (s->a[0] > s->a[1] && s->a[0] < s->a[2] && s->a[1] < s->a[2])
 		sa(s, true);
@@ -18,12 +18,14 @@ static void	sort_three(t_base *s)
 	}
 	if (s->a[0] < s->a[1] && s->a[0] > s->a[2] && s->a[1] > s->a[2])
 		rra(s, true);
+	return (1);
 }
 
 void	sort_stack(t_base *base)
 {
 	check_sorted(base); // sirali degilse devam edecek
-	base->size_b = base->size_a;
+	// ft_printf("base->size_a: %d\n", base->size_a);
+	base->size_b = 0;
 	base->b = (int *)malloc(sizeof(int) * base->size_a);
 	if (!base->b)
 		print_error("Error: base->b (int*)malloc(): Can't allocate memory!", 1);

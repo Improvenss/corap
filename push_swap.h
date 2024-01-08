@@ -26,6 +26,7 @@ typedef struct s_base
 
 void	check_repeating(t_base *base);
 void	check_number(char *arg);
+int	is_sorted(int *stack_a, int size, int flag);
 void	check_sorted(t_base *base);
 // -------------- Cift Tirnak -----------------
 void	set_quotation_args(t_base *base, int ac, char **av);
@@ -40,11 +41,23 @@ void	print_error(char *str, int err_num);
 // -------- Sorting ---------------------------
 void	sort_stack(t_base *base);
 void	sort_many(t_base *base);
-void	sort_seperate(t_base *base);
+void	sort_seperate(t_base *base, int len);
+int	sort_three(t_base *s);
+int	ft_quicksort_a(t_base *stack, int len, int count);
+int	ft_quicksort_b(t_base *stack, int len, int count);
+int	ft_push(t_base *stack, int len, int flag);
+int	ft_sort_small_a(t_base *s);
+int	ft_sort_small_a2(t_base *s, int len);
+int	ft_sort_small_b(t_base *s, int len);
 // -------- Get -------------------------------
 int	get_stack_size(int *stack);
 
 // -------- Find ------------------------------
+void	ft_bubble_sort(int *tmp_stack, int size);
+int	ft_get_middle(int *pivot, int *stack_a, int size);
+int	find_small(int *stack, int size);
+int	find_middle(int *stack, int size);
+int	find_large(int *stack, int size);
 int	find_sml(t_base *base);
 
 // --------------- Operations -----------------
