@@ -2,29 +2,11 @@
 
 void	sort_many(t_base *base)
 {
-	find_sml(base); // small middle large sayiyi bul.
+	base->size_b = 0;
+	base->b = (int *)malloc(sizeof(int) * base->size_a);
+	if (!base->b)
+		print_error("Error\n", 1);
 	sort_seperate(base, base->size_a);
-	// print_stack(base);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// pb(base, false);
-	// // pa(base, false);
-	// // pa(base, false);
-	// // ra(base, false);
-	// // ra(base, false);
-	// print_stack(base);
+	ft_printf("sortlandi\n");
+	// free(base->b);
 }

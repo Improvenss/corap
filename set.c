@@ -1,8 +1,8 @@
 #include "push_swap.h"
+#include <stdio.h>
 
 void	set_quotation_args(t_base *base, int ac, char **av)
 {
-	(void)ac;
 	char	**args;
 	int		i;
 
@@ -12,20 +12,22 @@ void	set_quotation_args(t_base *base, int ac, char **av)
 	if (args[0] && args[1] == NULL)
 		exit(0);
 	i = -1;
+	ac = -1;
+	while (args[++ac]);
+	base->a = (int *)malloc(sizeof(int) * ac);
+	if (!base->a)
+		print_error("Error\n", 1);
 	while (args[++i])
 	{
 		check_number(args[i]);
-		base->a[i] = *(int *)malloc(sizeof(int));
-		if (!base->a[i])
-			print_error("Error\n", 1);
 		base->a[i] = ft_atoi(args[i]);
 	}
+	free(args);
 	base->size_a = i;
 }
 
 void	set_args(t_base *base, int ac, char **av)
 {
-	(void)base;
 	int	i;
 
 	i = 0;

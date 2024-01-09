@@ -1,4 +1,5 @@
 #include "push_swap.h"
+#include <stdio.h>
 
 /**
  * @brief 
@@ -28,12 +29,13 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
+		(void)av;
 	if (ac == 2)
 		set_quotation_args(&base, ac, av);
 	else
 		set_args(&base, ac, av);
-	// ft_printf("A stack'imizin sayisi: %d\n", base.size_a);
 	check_repeating(&base);
 	sort_stack(&base);
 	// check_sorted(&base);
+	return (0);
 }

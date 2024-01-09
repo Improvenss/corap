@@ -67,6 +67,6 @@ void check_sorted(t_base *base)
 	while (++i < base->size_a - 1)
 		if (base->a[i] > base->a[i + 1])
 			return ;
-	// ft_printf("ZATEN SIRALI ASKO\n");
+	ft_printf("ZATEN SIRALI ASKO\n");
 	exit(0);
 }
