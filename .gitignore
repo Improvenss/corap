@@ -2,3 +2,4 @@
 .vscode
 log_error
 problem_100
+*.dSYM

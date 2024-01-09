@@ -7,6 +7,6 @@ void	sort_many(t_base *base)
 	if (!base->b)
 		print_error("Error\n", 1);
 	sort_seperate(base, base->size_a);
-	ft_printf("sortlandi\n");
+	// ft_printf("sortlandi\n");
 	// free(base->b);
 }

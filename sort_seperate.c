@@ -1,4 +1,5 @@
 #include "push_swap.h"
+
 int	ft_quicksort_a(t_base *stack, int len, int count)
 {
 	int	pivot_a;
@@ -21,7 +22,7 @@ int	ft_quicksort_a(t_base *stack, int len, int count)
 		else if (++count)
 			ra(stack, 1);
 	}
-	while (items / 2 + items % 2 != stack->size_a && count--)
+	while (stack->size_a != items / 2 + items % 2 && count--)
 		rra(stack, 1);
 	return (ft_quicksort_a(stack, items / 2 + items % 2, 0),
 		ft_quicksort_b(stack, items / 2, 0));
@@ -55,13 +56,13 @@ int	ft_quicksort_b(t_base *stack, int len, int count)
 
 void	sort_seperate(t_base *stack, int len)
 {
-	int	pivot_a;
-	int	pivot_b;
+	int	pivot_a; // a stack'inin pivotu
+	int	pivot_b; // b stack'inin pivotu
 	int	items;
 
 	items = len;
 	ft_get_middle(&pivot_a, stack->a, len);
-	while (len != items / 2 + items % 2)
+	while (len != items / 2 + items % 2) // yarisina kadar donuyor 
 	{
 		if (stack->a[0] < pivot_a && (len--))
 			pb(stack, 1);

@@ -35,6 +35,6 @@ int	main(int ac, char **av)
 		set_args(&base, ac, av);
 	check_repeating(&base);
 	sort_stack(&base);
-	// check_sorted(&base);
+	check_sorted(&base);
 	return (0);
 }
