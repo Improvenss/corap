@@ -29,7 +29,6 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
-		(void)av;
 	if (ac == 2)
 		set_quotation_args(&base, ac, av);
 	else
