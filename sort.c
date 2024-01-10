@@ -21,17 +21,21 @@ int	sort_three(t_base *s)
 	return (1);
 }
 
+/**
+ * @brief 
+ * 
+ * @fn check_sorted(): Sayilar sirali degilse devam edecek
+ *  ki siralasin.
+ * @param base 
+ */
 void	sort_stack(t_base *base)
 {
-	check_sorted(base); // sirali degilse devam edecek
+	check_sorted(base);
 	if (base->size_a == 2)
 		sa(base, true);
 	else if (base->size_a == 3)
 		sort_three(base);
 	else
 		sort_many(base);
-	print_stack(base);
-	// free(base->a);
-	// while (base->size_a)
-	// 	free(base->a);
+	free(base->a);
 }

@@ -1,5 +1,4 @@
 #include "push_swap.h"
-#include <stdio.h>
 
 /**
  * @brief 
@@ -19,6 +18,10 @@
  *  yani senin ./push_swap'i calistirdigindaki ciktilarini tek tek
  *  ekleyip dogru bir sekilde siralanmis mi diye kontrol ediyor.
  * 
+ *  make && ARG='4 1 2 6 7 5 2522525 -25233'; ./push_swap $ARG
+ * 
+ *  make && ./push_swap `ruby -e "puts (0..499).to_a.shuffle.join(' ')"`
+ * 
  * @param ac 
  * @param av 
  * @return int 
@@ -35,6 +38,5 @@ int	main(int ac, char **av)
 		set_args(&base, ac, av);
 	check_repeating(&base);
 	sort_stack(&base);
-	check_sorted(&base);
 	return (0);
 }

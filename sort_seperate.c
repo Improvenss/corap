@@ -56,13 +56,13 @@ int	ft_quicksort_b(t_base *stack, int len, int count)
 
 void	sort_seperate(t_base *stack, int len)
 {
-	int	pivot_a; // a stack'inin pivotu
-	int	pivot_b; // b stack'inin pivotu
+	int	pivot_a;
+	int	pivot_b;
 	int	items;
 
 	items = len;
 	ft_get_middle(&pivot_a, stack->a, len);
-	while (len != items / 2 + items % 2) // yarisina kadar donuyor 
+	while (len != items / 2 + items % 2)
 	{
 		if (stack->a[0] < pivot_a && (len--))
 			pb(stack, 1);

@@ -1,7 +1,14 @@
 #include "push_swap.h"
 #include <limits.h>
-#include <stdio.h>
 
+/**
+ * @brief Bu atoi'nin aynisi sadece sayimiz INT_MAX
+ *  ve INT_MIN araliginda mi kontrolu sagliyor.
+ * 
+ * @param argv 
+ * @return true 
+ * @return false 
+ */
 bool	if_args_mintm(const char *argv)
 {
 	long	ret_value;
@@ -27,31 +34,3 @@ bool	if_args_mintm(const char *argv)
 	else
 		return (false);
 }
-
-// int	check_num_is_int_range(const char *str)
-// {
-// 	int	i;
-// 	int	neg;
-// 	int	number;
-
-// 	i = 0;
-// 	neg = 1;
-// 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-// 		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-// 		i++;
-// 	if (str[i] == '-' || str[i] == '+')
-// 	{
-// 		if (str[i] == '-')
-// 			neg = -1;
-// 		i++;
-// 	}
-// 	number = 0;
-// 	while (str[i] >= '0' && str[i] <= '9')
-// 	{
-// 		number = (number * 10) + (str[i] - '0');
-// 		i++;
-// 	}
-// 	if (number * neg > INT_MAX || number * neg < INT_MIN)
-// 		print_error("Error\n", 1);
-// 	return (number * neg);
-// }

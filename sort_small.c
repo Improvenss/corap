@@ -14,7 +14,6 @@ int	ft_sort_small_a(t_base *s)
 {
 	if (s->a[0] > s->a[1])
 	{
-	// ft_printf("s->b[0]: %d, s->b[1]: %d\n", s->b[0], s->b[1]);
 		if (s->b[0] < s->b[1])
 			ss(s, 1);
 		else
@@ -25,13 +24,11 @@ int	ft_sort_small_a(t_base *s)
 
 int	ft_sort_small_a2(t_base *s, int len)
 {
-	// print_stack(s);
 	while (len != 3 || !(s->a[0] < s->a[1]
 			&& s->a[1] < s->a[2]))
 	{
 		if (len == 3 && s->a[0] > s->a[1] && s->a[2])
 		{
-			// ft_printf("s->a[0]: %d, s->a[1]: %d, && s->b[0]: %d, s->b[1]: %d\n", s->a[0], s->a[1], s->b[0], s->b[1]);
 			if ((s->a[0] > s->a[1]) && (s->b[0] < s->b[1]))
 				ss(s, 1);
 			else
