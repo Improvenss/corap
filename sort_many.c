@@ -6,6 +6,6 @@ void	sort_many(t_base *base)
 	base->b = (int *)malloc(sizeof(int) * base->size_a);
 	if (!base->b)
 		print_error("Error\n", 1);
-	sort_seperate(base, base->size_a);
+	sort_seperate(base);
 	free(base->b);
 }

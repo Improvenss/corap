@@ -10,7 +10,7 @@ int	ft_push(t_base *stack, int len, int flag)
 	return (len);
 }
 
-int	ft_sort_small_a(t_base *s)
+int	sort_small_a(t_base *s)
 {
 	if (s->a[0] > s->a[1])
 	{
@@ -22,7 +22,7 @@ int	ft_sort_small_a(t_base *s)
 	return (1);
 }
 
-int	ft_sort_small_a2(t_base *s, int len)
+int	sort_small_a2(t_base *s, int len)
 {
 	while (len != 3 || !(s->a[0] < s->a[1]
 			&& s->a[1] < s->a[2]))
@@ -45,7 +45,7 @@ int	ft_sort_small_a2(t_base *s, int len)
 	return (1);
 }
 
-int	ft_sort_small_b(t_base *s, int len)
+int	sort_small_b(t_base *s, int len)
 {
 	if (len == 2)
 	{

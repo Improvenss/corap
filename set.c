@@ -18,8 +18,6 @@ void	set_quotation_args(t_base *base, int ac, char **av)
 	args = ft_split(av[1], ' ');
 	if (!args)
 		print_error("Error\n", 1);
-	if (args[0] && args[1] == NULL)
-		exit(0);
 	ac = -1;
 	while (args[++ac])
 	base->a = (int *)malloc(sizeof(int) * ac);
@@ -54,7 +52,7 @@ void	set_args(t_base *base, int ac, char **av)
 	i = 0;
 	base->size_a = ac - 1;
 	base->a = (int *)malloc(sizeof(int) * base->size_a);
-	if (!base->b)
+	if (!base->a)
 		print_error("Error\n", 1);
 	while (++i < ac)
 	{

@@ -24,24 +24,20 @@ void	sort_bubble(int *stack, int size)
 	}
 }
 
-int	ft_get_middle(int *pivot, int *stack_a, int size)
+void	find_middle(int *pivot, int *stack, int size)
 {
 	int	i;
 	int	*tmp;
 
 	tmp = (int *)malloc(sizeof(int) * size);
 	if (!tmp)
-		return (0);
-	i = 0;
-	while (i < size)
-	{
-		tmp[i] = stack_a[i];
-		i++;
-	}
+		return (print_error("Error\n", 1));
+	i = -1;
+	while (++i < size)
+		tmp[i] = stack[i];
 	sort_bubble(tmp, size);
 	*pivot = tmp[size / 2];
 	free(tmp);
-	return (1);
 }
 
 int	find_small(int *stack, int size)

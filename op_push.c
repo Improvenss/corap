@@ -4,6 +4,8 @@ void	pa(t_base *base, bool print)
 {
 	int	i;
 
+	if (base->size_b <= 0)
+		return ;
 	i = base->size_a;
 	while (i > 0)
 	{
@@ -26,6 +28,8 @@ void	pb(t_base *base, bool print)
 {
 	int	i;
 
+	if (base->size_a <= 0)
+		return ;
 	i = base->size_b;
 	while (i > 0)
 	{

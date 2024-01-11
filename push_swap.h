@@ -1,13 +1,6 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# define B_CYAN		"\033[1;36m"
-# define B_BLUE		"\033[1;34m"
-# define B_YELLOW	"\033[1;33m"
-# define B_GREEN	"\033[1;32m"
-# define B_RED		"\033[1;31m"
-# define B_RESET	"\033[1m"
-
 # include "libft/libft.h"
 # include <stdlib.h>
 # include <stdbool.h>
@@ -42,21 +35,21 @@ void	print_error(char *str, int err_num);
 // -------- Sorting ---------------------------
 void	sort_stack(t_base *base);
 void	sort_many(t_base *base);
-void	sort_seperate(t_base *base, int len);
+void	sort_seperate(t_base *base);
 int		sort_three(t_base *s);
-int		ft_quicksort_a(t_base *stack, int len, int count);
-int		ft_quicksort_b(t_base *stack, int len, int count);
+int		quicksort_a(t_base *stack, int len, int count);
+int		quicksort_b(t_base *stack, int len, int count);
 int		ft_push(t_base *stack, int len, int flag);
-int		ft_sort_small_a(t_base *s);
-int		ft_sort_small_a2(t_base *s, int len);
-int		ft_sort_small_b(t_base *s, int len);
+int		sort_small_a(t_base *s);
+int		sort_small_a2(t_base *s, int len);
+int		sort_small_b(t_base *s, int len);
 
 // -------- Get -------------------------------
 int		get_stack_size(int *stack);
 
 // -------- Find ------------------------------
 void	sort_bubble(int *tmp_stack, int size);
-int		ft_get_middle(int *pivot, int *stack_a, int size);
+void	find_middle(int *pivot, int *stack, int size);
 int		find_small(int *stack, int size);
 int		find_large(int *stack, int size);
 

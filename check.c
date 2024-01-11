@@ -31,7 +31,7 @@ void	check_number(char *arg)
 	{
 		while (ft_isspace(arg[i]))
 			i++;
-		if (arg[i] == '-' || arg[i] == '+')
+		if (arg[i] == '-')
 			i++;
 		if (!ft_isdigit(arg[i]))
 			print_error("Error\n", 1);
