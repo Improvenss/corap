@@ -1,12 +1,12 @@
 #include "push_swap.h"
 
-int	quicksort_a(t_base *stack, int len, int count)
+void	quicksort_a(t_base *stack, int len, int count)
 {
 	int	pivot_a;
 	int	items;
 
 	if (is_sorted(stack->a, len, 0) == 1)
-		return (1);
+		return ;
 	if (len == 2)
 		return (sort_small_a(stack));
 	else if (len == 3 && stack->size_a == 3)
@@ -24,11 +24,11 @@ int	quicksort_a(t_base *stack, int len, int count)
 	}
 	while (stack->size_a != items / 2 + items % 2 && count--)
 		rra(stack, 1);
-	return (quicksort_a(stack, items / 2 + items % 2, 0),
-		quicksort_b(stack, items / 2, 0));
+	quicksort_a(stack, items / 2 + items % 2, 0);
+	quicksort_b(stack, items / 2, 0);
 }
 
-int	quicksort_b(t_base *stack, int len, int count)
+void	quicksort_b(t_base *stack, int len, int count)
 {
 	int	pivot_b;
 	int	items;
@@ -49,9 +49,8 @@ int	quicksort_b(t_base *stack, int len, int count)
 	}
 	while (items / 2 != stack->size_b && count--)
 		rrb(stack, 1);
-	return (quicksort_a(stack, items / 2 + items % 2, 0),
-		quicksort_b(stack, items / 2, 0));
-	return (1);
+	quicksort_a(stack, items / 2 + items % 2, 0);
+	quicksort_b(stack, items / 2, 0);
 }
 
 void	sort_seperate(t_base *base)

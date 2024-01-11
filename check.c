@@ -26,16 +26,15 @@ void	check_number(char *arg)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
+	while (ft_isspace(arg[i]))
+		i++;
+	if (arg[i] == '-')
+		i++;
+	i--;
 	while (arg[++i])
-	{
-		while (ft_isspace(arg[i]))
-			i++;
-		if (arg[i] == '-')
-			i++;
 		if (!ft_isdigit(arg[i]))
 			print_error("Error\n", 1);
-	}
 }
 
 int	is_sorted(int *stack_a, int size, int flag)

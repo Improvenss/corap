@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	sort_three(t_base *s)
+void	sort_three(t_base *s)
 {
 	if (s->a[0] > s->a[1] && s->a[0] < s->a[2] && s->a[1] < s->a[2])
 		sa(s, true);
@@ -18,7 +18,6 @@ int	sort_three(t_base *s)
 	}
 	if (s->a[0] < s->a[1] && s->a[0] > s->a[2] && s->a[1] > s->a[2])
 		rra(s, true);
-	return (1);
 }
 
 /**

@@ -10,7 +10,7 @@ int	ft_push(t_base *stack, int len, int flag)
 	return (len);
 }
 
-int	sort_small_a(t_base *s)
+void	sort_small_a(t_base *s)
 {
 	if (s->a[0] > s->a[1])
 	{
@@ -19,10 +19,9 @@ int	sort_small_a(t_base *s)
 		else
 			sa(s, 1);
 	}
-	return (1);
 }
 
-int	sort_small_a2(t_base *s, int len)
+void	sort_small_a2(t_base *s, int len)
 {
 	while (len != 3 || !(s->a[0] < s->a[1]
 			&& s->a[1] < s->a[2]))
@@ -42,10 +41,9 @@ int	sort_small_a2(t_base *s, int len)
 		else if (len++)
 			pa(s, 1);
 	}
-	return (1);
 }
 
-int	sort_small_b(t_base *s, int len)
+void	sort_small_b(t_base *s, int len)
 {
 	if (len == 2)
 	{
@@ -67,5 +65,4 @@ int	sort_small_b(t_base *s, int len)
 				sb(s, 1);
 		}
 	}
-	return (1);
 }

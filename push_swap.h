@@ -36,13 +36,13 @@ void	print_error(char *str, int err_num);
 void	sort_stack(t_base *base);
 void	sort_many(t_base *base);
 void	sort_seperate(t_base *base);
-int		sort_three(t_base *s);
-int		quicksort_a(t_base *stack, int len, int count);
-int		quicksort_b(t_base *stack, int len, int count);
+void	sort_three(t_base *s);
+void	quicksort_a(t_base *stack, int len, int count);
+void	quicksort_b(t_base *stack, int len, int count);
 int		ft_push(t_base *stack, int len, int flag);
-int		sort_small_a(t_base *s);
-int		sort_small_a2(t_base *s, int len);
-int		sort_small_b(t_base *s, int len);
+void	sort_small_a(t_base *s);
+void	sort_small_a2(t_base *s, int len);
+void	sort_small_b(t_base *s, int len);
 
 // -------- Get -------------------------------
 int		get_stack_size(int *stack);
